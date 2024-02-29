@@ -13,13 +13,12 @@ import jakarta.persistence.TemporalType;
 @Entity
 @Table(name = "pessoa_fisica")
 @PrimaryKeyJoinColumn(name = "id")
-public class PessoaFisica extends Pessoa implements Serializable{
+public class PessoaFisica extends Pessoa implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
 	@Column(nullable = false)
 	private String cpf;
-	
+
 	@Temporal(TemporalType.DATE)
 	private Date dataNascimentoDate;
 
@@ -38,7 +37,5 @@ public class PessoaFisica extends Pessoa implements Serializable{
 	public void setDataNascimentoDate(Date dataNascimentoDate) {
 		this.dataNascimentoDate = dataNascimentoDate;
 	}
-	
-	
 
 }
