@@ -1,7 +1,5 @@
 package thiago.loja.virtual.enums;
 
-import org.hibernate.bytecode.internal.bytebuddy.PrivateAccessorException;
-
 public enum TipoEndereco {
 	
 	COBRANCA("Cobranca"),
