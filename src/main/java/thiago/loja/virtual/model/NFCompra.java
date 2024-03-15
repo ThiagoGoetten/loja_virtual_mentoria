@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.ConstraintMode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
@@ -31,13 +32,19 @@ public class NFCompra implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_nf_compra")
 	private Long id;
 	
+	@Column(nullable = false)
 	private String numNota;
+	@Column(nullable = false)
 	private String serieNota;
+	@Column(nullable = false)
 	private String descObsNota;
+	@Column(nullable = false)
 	private BigDecimal valorTotalNota;
+
 	private BigDecimal valorDescNota;
+	@Column(nullable = false)
 	private BigDecimal valorICMS;
-	
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dataCompra;
 	

@@ -7,6 +7,7 @@ import java.util.Objects;
 
 import javax.xml.crypto.Data;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,13 +27,14 @@ public class CupDesc implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_cup_desc")
 	private Long id;
-
+	
+	@Column(nullable = false)
 	private String codDesc;
 
 	private BigDecimal valorRealDesc;
 
 	private BigDecimal valorPorcDesc;
-	
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date validadeCupomData;
 

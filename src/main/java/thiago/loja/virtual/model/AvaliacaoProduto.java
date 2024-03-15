@@ -27,9 +27,10 @@ public class AvaliacaoProduto implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_avaliacao_produto")
 	private Long id;
-	@Column(columnDefinition = "text")
-	private String descricao;
 	
+	@Column(nullable = false)
+	private String descricao;
+	@Column(nullable = false)
 	private Integer nota;
 	
 	@ManyToOne(targetEntity = Pessoa.class)

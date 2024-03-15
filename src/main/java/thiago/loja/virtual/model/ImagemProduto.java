@@ -27,10 +27,11 @@ public class ImagemProduto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_img_produto")
 	private Long id;
 	
-	@Column(columnDefinition = "text", length = 2000)
+	@Column(columnDefinition = "text", length = 2000, nullable = false)
 	private String imgProduto;
-	@Column(columnDefinition = "text", length = 2000)
+	@Column(columnDefinition = "text", length = 2000, nullable = false)
 	private String miniImgProduto;
+	
 	@ManyToOne
 	@JoinColumn(name = "produto_id", nullable = false, foreignKey =
 	@ForeignKey(value = ConstraintMode.CONSTRAINT, name = "produto_fk"))
